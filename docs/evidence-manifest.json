@@ -1,0 +1,70 @@
+{
+  "package": "lab-09-soc-phishing-incident-triage",
+  "title": "Lab 09: SOC Phishing Incident Triage and Classification",
+  "evidence_basis": "client-reported summary only; not independently verified",
+  "source": {
+    "type": "Client-provided two-point summary received by message",
+    "stored_outside_package": "lab-09/source/client-brief.txt",
+    "sha256": "f66234b666de81d9d07102f394777d09ce6322448154e7f1c838cf24502ff575",
+    "platform": "not provided",
+    "lab_guide": "not provided",
+    "screenshots": "not provided",
+    "logs_or_exports": "not provided"
+  },
+  "reported_facts": [
+    "3 SIEM priority alerts triaged during an active credential phishing incident",
+    "1 false positive identified: internal scheduled scan",
+    "FIN_FLOOR phishing cluster (18 critical events) escalated",
+    "Cross-log evidence from alert, auth and network data",
+    "CyberChef: Base64 payload decoded to harvest-alantra[.]com/collect?token= (defanged in this package)",
+    "VirusTotal: malicious domain detection ratio confirmed (ratio not provided)",
+    "MITRE ATT&CK Navigator: T1566.002 Spearphishing Link",
+    "Formal classification record triggered FCA and GDPR notification processes (lab scenario)"
+  ],
+  "not_provided": [
+    "Platform name and lab title",
+    "SIEM product",
+    "Alert names, IDs and timestamps",
+    "Outcome of the third alert",
+    "VirusTotal detection ratio and lookup date",
+    "Affected user and host counts",
+    "Contents of the escalation and classification record",
+    "Any screenshot or evidence of completion"
+  ],
+  "screenshots": [],
+  "screenshots_note": "No screenshots were supplied; none were created or simulated.",
+  "indicator_handling": {
+    "domain": "defanged as harvest-alantra[.]com; never rendered as a link",
+    "token_value": "not supplied and not included"
+  },
+  "banner": {
+    "file": "assets/project-banner.png",
+    "sha256": "4b16d674748c52c1da798e01cfff8cd65a48722e05013a58bf2f631bb2649fc4",
+    "note": "Generated title graphic; contains no evidence"
+  },
+  "mermaid_diagrams": [
+    {
+      "title": "Architecture",
+      "editable_source": "README.md, mermaid block starting at line 121",
+      "png_export": "assets/architecture.png",
+      "width": 1763,
+      "height": 1782,
+      "sha256": "47e0bd5c4ba094e5315bbd6738834d15f78ded8110f5d9c06d09a6136e7742a0"
+    },
+    {
+      "title": "Triage and classification workflow",
+      "editable_source": "README.md, mermaid block starting at line 164",
+      "png_export": "assets/workflow.png",
+      "width": 1692,
+      "height": 2671,
+      "sha256": "faecbfb291ba7817c03f40ebe66a7b13b8702e7f383faecee9d806053aaa5451"
+    }
+  ],
+  "limitations": [
+    "All results are client-reported and have not been independently verified.",
+    "Method notes in the README describe standard practice, not the exact actions taken on the platform.",
+    "The outcome of the third SIEM alert is not stated in the summary.",
+    "FCA and GDPR references describe the lab scenario, not a real regulatory filing; no compliance claim is made.",
+    "The scenario organization name must be confirmed as fictional by the client."
+  ]
+}
